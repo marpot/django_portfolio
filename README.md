@@ -28,3 +28,4 @@ Follow these steps to set up the project locally:
 ```bash
 git clone https://github.com/marpot/django-portfolio.git
 cd portfolio-app
+python manage.py runserver
