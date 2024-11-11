@@ -1,0 +1,19 @@
+# Ignorowanie katalogu node_modules (jeśli używasz npm do front-endu)
+node_modules/
+
+# Ignorowanie plików bazy danych SQLite (jeśli używasz SQLite)
+db.sqlite3
+*.sqlite3
+
+# Ignorowanie plików tymczasowych i logów
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Ignorowanie plików systemowych
+.DS_Store      # dla macOS
+Thumbs.db       # dla Windows
+
+# Ignorowanie plików migracji (w razie potrzeby)
+__pycache__/

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+    Contact page
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="contact-card">
+        <h1>Contact with me</h1>
+        <p class="contact-description">If you have a remote job offer or project that you need assistance with, feel free to contact me!</p>
+        
+        <!-- Formularz kontaktowy -->
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <!-- Wyświetlenie pól formularza -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Przycisk wysyłania wiadomości -->
+            <button type="submit" class="button-1">Send Message</button>
+        </form>
+    </div>
+{% endblock content %}

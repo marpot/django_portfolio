@@ -1,0 +1,116 @@
+.button-1 {
+    background-color: #4CAF50; /* Zielone tło */
+    color: white; /* Biały kolor tekstu */
+    padding: 10px 20px; /* Wewnętrzny margines */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    font-size: 16px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor wskazujący, że to przycisk */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Styl kontenera formularza */
+.contact-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Nagłówek formularza */
+.contact-card h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Etykiety pól formularza */
+.contact-card label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Pola tekstowe */
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+/* Efekt po najechaniu na pole */
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Przyciski */
+.contact-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efekt hover na przycisku */
+.contact-card button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Efekt po kliknięciu przycisku */
+.contact-card button:active {
+    transform: scale(0.98);
+}
+
+.contact-description {
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 16px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+/* Stylizacja dla dużych ekranów (tabletów i desktopów) */
+@media (min-width: 768px) {
+    .contact-card {
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    .contact-card h1 {
+        font-size: 30px;
+    }
+}
+

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Portfilio - Home{% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        {% block extrahead %}
+        {% endblock extrahead %}
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <ul class="nav-menu">
+                <button class="button-1" role="button" onclick="window.location.href='/home';">Projects</button>
+                <button class="button-1" role="button" onclick="window.location.href='/contact';">Contact</a></button>
+                <button class="button-1" role="button" onclick="window.location.href='/about';">About Me</button>
+            </ul>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+
+        {% block extra_js %}
+        {% endblock extra_js %}
+    </body>
+</html>

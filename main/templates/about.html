@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    About me
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="about-container">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <img src="{% static 'images/logo.png' %}" alt="My Photo" class="profile-photo">
+            <p>
+                Hi! My name is Marcin Potoczny, and I am a Python and JavaScript developer from Poland. I specialize in Django and Vue.js, 
+                and I am passionate about creating full-stack web applications. 
+                In my professional career, I have worked on developing and implementing a chatbot for the IT Center of the Ministry of Finance. 
+                I learn quickly, work well in a team, and am well-organized.
+            </p>
+            <p>
+                You can check out my CV here: <a href="{% static 'files/CV.pdf' %}" target="_blank">Download CV</a>.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
