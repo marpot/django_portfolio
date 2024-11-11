@@ -134,13 +134,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Vue.js](https://vuejs.org/) (or other libraries you're using)
 - [npm](https://www.npmjs.com/)
 ```
-
-### Jak to dodać na GitHub:
-1. Skopiuj cały powyższy kod.
-2. W repozytorium na GitHub przejdź do zakładki "Code".
-3. Kliknij przycisk "Add file" i wybierz "Create new file".
-4. Nazwij plik `README.md`.
-5. Wklej skopiowany kod do edytora.
-6. Kliknij "Commit new file", aby zapisać zmiany.
-
-Gotowe! Twój `README.md` jest teraz na GitHubie i będzie wyświetlany na stronie repozytorium.
