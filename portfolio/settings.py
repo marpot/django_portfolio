@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8bv(11gbxj9knea3e0o3un=c@q!+hk_)-d1srsqen9@-(f5oy)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['django-portfolio-n310.onrender.com', '127.0.0.1']
 
@@ -120,6 +120,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    BASE_DIR / "main/static",
     # Adjust this path to point to portfolio/main/static
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
