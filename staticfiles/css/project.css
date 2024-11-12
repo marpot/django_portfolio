@@ -1,5 +1,4 @@
 /* Project Card */
-
 .project-card {
     display: flex;
     align-items: flex-start;
@@ -38,6 +37,7 @@
     display: flex;
     flex: 1; /* Allows the carousel to fill the space */
     overflow: hidden;
+    width: 100%;
     position: relative; /* Ensure the images container doesn't overlap controls */
   }
   

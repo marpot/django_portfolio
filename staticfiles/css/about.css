@@ -1,0 +1,80 @@
+.button-1 {
+    background-color: #4CAF50; /* Zielone tło */
+    color: white; /* Biały kolor tekstu */
+    padding: 10px 20px; /* Wewnętrzny margines */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    font-size: 16px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor wskazujący, że to przycisk */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* about.css */
+
+.about-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 700px;
+    margin: 10px 0;
+}
+
+.about-content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+

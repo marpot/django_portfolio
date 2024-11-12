@@ -20,15 +20,13 @@ a {
 }
 
 /* CSS */
-
-  
 a:hover {
     text-decoration: underline;
 }
   
 /* Header and Navigation Menu */
 header {
-    background-color: #f1f6fc;
+    background-color: #f4f4f4;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -50,7 +48,7 @@ header {
 .nav-menu a {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #007bff;
+    background-color: #ddedff;
     color: white;
     border-radius: 8px;
     font-weight: bold;
@@ -61,7 +59,7 @@ header {
 }
   
 .nav-menu a:hover {
-    background-color: #0056b3; /* Zmiana koloru tła przy hover */
+    background-color: #e4e4e4; /* Zmiana koloru tła przy hover */
     color: #d1eaff; /* Jaśniejszy kolor tekstu */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Cień przy hover */
     transform: translateY(-3px); /* Efekt unoszenia linku przy hover */
