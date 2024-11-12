@@ -13,25 +13,23 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+from dotenv import load_dotenv
+
+# Załaduj zmienne środowiskowe
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8bv(11gbxj9knea3e0o3un=c@q!+hk_)-d1srsqen9@-(f5oy)'
+# SECRET_KEY & other sensitive data
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-8bv(11gbxj9knea3e0o3un=c@q!+hk_)-d1srsqen9@-(f5oy)')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['django-portfolio-n310.onrender.com', '127.0.0.1']
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'django-portfolio-n310.onrender.com,127.0.0.1,localhost').split(',')
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'main',  # Replace 'main' with the name of your app if necessary
 ]
 
 MIDDLEWARE = [
@@ -77,9 +75,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgres://user:password@localhost/dbname')
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_portfolio_e99c',
+        'USER': 'marpot',  # Twoja nazwa użytkownika
+        'PASSWORD': 'VkWtngLBRFS8zhjyelKvNp9jXZDYI5Lg',  # Twoje hasło
+        'HOST': 'dpg-cspo3f0gph6c73do1qcg-a.frankfurt-postgres.render.com',  # Host z pełnym adresem
+        'PORT': '5432',  # Standardowy port PostgreSQL
     }
+}
 
 
 
@@ -120,28 +127,28 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR / "main/static",
-    # Adjust this path to point to portfolio/main/static
+    BASE_DIR / "main/static",  # Adjust this path to point to portfolio/main/static
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+# Media files
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-
-# EMAIL SETTINGS
+# Email settings
 # settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'kontaktpracaprogramista@gmail.com'
-EMAIL_HOST_PASSWORD = 'xlqogcvxbimkhxtp'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'kontaktpracaprogramista@gmail.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'xlqogcvxbimkhxtp')
 DEFAULT_FROM_EMAIL = 'kontaktpracaprogramista@gmail.com'
-
-
