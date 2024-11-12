@@ -9,7 +9,7 @@ from .forms import ContactForm
 def home(request):
     projects = Project.objects.all()
     tags = Tag.objects.all()
-    return render(request, "home.html", {"projects": projects, "tags": tags})
+    return render(request, "projects.html", {"projects": projects, "tags": tags})
 
 def about(request):
     return render(request, "about.html")
