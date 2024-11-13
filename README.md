@@ -108,9 +108,6 @@ Here are some screenshots of the app in action:
 ![image](https://github.com/user-attachments/assets/c4907d65-f8f9-47e0-8ba8-cdd8256bc964)
 
 
-
-![Project Portfolio Screenshot 2](screenshots/project-form.png)
-
 ## Deployment
 
 To deploy this project, follow the instructions for your preferred hosting platform, such as:
