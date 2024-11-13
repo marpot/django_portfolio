@@ -103,8 +103,12 @@ Once the server is running, you can:
 ## Screenshots
 
 Here are some screenshots of the app in action:
+![image](https://github.com/user-attachments/assets/49b7ea99-9a8b-4b7b-bfdd-bb2534f05d48)
+![image](https://github.com/user-attachments/assets/e1b94438-e84d-449f-a176-1b8e1225ca14)
+![image](https://github.com/user-attachments/assets/c4907d65-f8f9-47e0-8ba8-cdd8256bc964)
 
-![Project Portfolio Screenshot 1](screenshots/portfolio-view.png)
+
+
 ![Project Portfolio Screenshot 2](screenshots/project-form.png)
 
 ## Deployment
